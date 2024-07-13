@@ -11,9 +11,9 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::get('/dashboard', [VacanteController::class, 'index'])
     ->name('vacantes.index')
-    ->middleware(['auth', 'verified']);
+    ->middleware(['auth']);
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/vacantes/create', [VacanteController::class, 'create'])->name('vacantes.create');
 
     Route::get('/vacantes/{vacante}/edit', [VacanteController::class, 'edit'])->name('vacantes.edit');
@@ -21,7 +21,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::get('/notificaciones', NotificationController::class)
     ->name('notificaciones')
-    ->middleware(['auth', 'verified', 'rol.reclutador']);
+    ->middleware(['auth', 'rol.reclutador']);
 
 Route::get('/vacantes/{vacante}', [VacanteController::class, 'show'])->name('vacantes.show');
 
