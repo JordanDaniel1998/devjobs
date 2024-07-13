@@ -10,7 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 // MustVerifyEmail -> Activa la validación de email
-class User extends Authenticatable/*  implements MustVerifyEmail */
+class User extends Authenticatable /* implements MustVerifyEmail */
 {
     use HasFactory, Notifiable;
 
