@@ -6,8 +6,8 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VacanteController;
 use Illuminate\Support\Facades\Route;
-
-/* Route::get('/', HomeController::class)->name('home');
+/*
+Route::get('/', HomeController::class)->name('home');
 
 Route::get('/dashboard', [VacanteController::class, 'index'])
     ->name('vacantes.index')
